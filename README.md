@@ -57,7 +57,7 @@ Yaw rotates the drone clockwise or counter-clockwise without changing altitude o
 | **Battery (LiPo)** | High-discharge power source supplying energy to the motors and electronics. |
 
 ## Drone Sensors
-### 1. Gyroscope (Measuring Angular Velocity)
+### 1. Gyroscope 
 
 #### Working Principle
 The gyroscope measures **angular velocity** (the rate of rotation around an axis, expressed in degrees per second or rad/s) across the three rotational axes: Roll, Pitch, and Yaw. 
@@ -65,19 +65,12 @@ The gyroscope measures **angular velocity** (the rate of rotation around an axis
 * **The Coriolis Effect:** When the drone is rotated (e.g., pitched or rolled by wind), a secondary inertial force known as the **Coriolis force** acts perpendicularly to the direction of motion and the vibration. 
 * **Detection:** This force causes the vibrating elements to deflect slightly. Capacitive electrodes pick up this physical displacement, converting it into an electrical voltage proportional to the angular speed.
 
-### 2. Accelerometer (Measuring Linear Acceleration & Tilt)
+### 2. Accelerometer
 
 #### Working Principle
 The accelerometer measures **linear acceleration** along the X, Y, and Z axes, including the constant static acceleration pull of **Earth's gravity** ($1g \approx 9.81 \, \text{m/s}^2$).
 * **MEMS Design:** It consists of a microscopic proof mass attached to flexible micro-springs suspended between fixed capacitor plates. 
 * **Deflection & Capacitance:** When the drone accelerates linearly (speeds up, slows down, or moves vertically) or tilts, inertia shifts the microscopic proof mass. This movement changes the distance between the capacitor plates, altering electrical capacitance.
-
-
-### 3. Magnetometer (Measuring Magnetic Heading)
-
-#### Working Principle
-The magnetometer acts as a solid-state digital compass, measuring the strength and direction of the **Earth's magnetic field** relative to the drone's body frame.
-* **Sensing Technology:** Most drone magnetometers utilize **Anisotropic Magnetoresistance (AMR)** or Hall-effect sensors. These materials change their electrical resistance when exposed to external magnetic fields, allowing the sensor to resolve multi-axis vector components of ambient magnetism.
 
 ## 1.1 Basic Principles of Flight
 
@@ -91,11 +84,11 @@ The magnetometer acts as a solid-state digital compass, measuring the strength a
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/9b73b38523b5a0d7274a36173849037189bb3a61/Bernoulli.png)
 
-* **Streamline Division:** Incoming airflow splits at the leading edge into an upper path (blue) and a lower path (red)[cite: 3].
-* **Upper Path Dynamics:** The top path features high curvature and a longer distance, forcing air to move at high velocity, which creates a region of low pressure[cite: 3].
-* **Lower Path Dynamics:** The bottom path features lower curvature and a shorter distance, resulting in lower fluid velocity and higher static pressure[cite: 3].
-* **Bernoulli's Principle Core Rule:** According to Bernoulli's principle, an increase in fluid velocity occurs simultaneously with a decrease in static pressure[cite: 3].
-* **Lift Generation:** The resulting pressure differential—low pressure on top versus high pressure on the bottom—generates a net upward lifting force[cite: 3].
+* **Streamline Division:** Incoming airflow splits at the leading edge into an upper path (blue) and a lower path (red)
+* **Upper Path Dynamics:** The top path features high curvature and a longer distance, forcing air to move at high velocity, which creates a region of low pressure
+* **Lower Path Dynamics:** The bottom path features lower curvature and a shorter distance, resulting in lower fluid velocity and higher static pressure
+* **Bernoulli's Principle Core Rule:** According to Bernoulli's principle, an increase in fluid velocity occurs simultaneously with a decrease in static pressure
+* **Lift Generation:** The resulting pressure differential—low pressure on top versus high pressure on the bottom—generates a net upward lifting force
 
 ### Newton's Third Law
 An aircraft or propeller generates lift/thrust by accelerating air downward or backward. The air produces an equal and opposite reaction force on the aircraft.
@@ -127,15 +120,15 @@ Aircraft stability is the ability to return toward its original flight condition
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/Pitot_Tube.png)
 
-* **Primary Purpose:** A Pitot tube is an aerodynamic measurement instrument used to determine fluid flow velocity or aircraft airspeed[cite: 5].
+* **Primary Purpose:** A Pitot tube is an aerodynamic measurement instrument used to determine fluid flow velocity or aircraft airspeed
 * **Total Pressure ($P_t$):** 
-  * The central forward-facing opening points directly into the oncoming airflow[cite: 5].
-  * As air enters this tube, it is brought to a complete stop at a stagnation point, converting all kinetic energy into measurable stagnation pressure[cite: 5].
+  * The central forward-facing opening points directly into the oncoming airflow
+  * As air enters this tube, it is brought to a complete stop at a stagnation point, converting all kinetic energy into measurable stagnation pressure
 * **Static Pressure ($P_s$):** 
-  * Small ports located on the sides of the probe, perpendicular to the flow, measure the undisturbed ambient static pressure of the surrounding fluid[cite: 5].
+  * Small ports located on the sides of the probe, perpendicular to the flow, measure the undisturbed ambient static pressure of the surrounding fluid
 * **Pressure Transducer & Airspeed Calculation:** 
-  * Both the total pressure ($P_t$) and static pressure ($P_s$) lines feed directly into a differential pressure transducer[cite: 5].
-  * The transducer measures the difference between these two values ($P_t - P_s$), which gives the dynamic pressure used to calculate the actual speed[cite: 5].
+  * Both the total pressure ($P_t$) and static pressure ($P_s$) lines feed directly into a differential pressure transducer
+  * The transducer measures the difference between these two values ($P_t - P_s$), which gives the dynamic pressure used to calculate the actual speed
 
 ## 1.5 Radio Altimeter
 
@@ -147,21 +140,14 @@ Basic operation:
 3. Determine the signal's travel time.
 4. Calculate height above the surface.
 
-\[
-h=\frac{ct}{2}
-\]
+### Advantages
+* **True Terrain Clearance:** Measures exact height above the immediate ground, unlike barometric altimeters which depend on local pressure settings and measure height above sea level (MSL).
+* **Low-Visibility Operations:** Crucial for precision approaches (such as ILS Category II and III landings) where knowing the exact distance to the runway threshold is vital.
+* **Safety Systems Integration:** Provides essential altitude data to Ground Proximity Warning Systems (GPWS) to help prevent controlled flight into terrain (CFIT).
 
-where \(c\) is the speed of light and \(t\) is the round-trip travel time.
-
-## 1.6 Basic Flight Concept
-
-Aircraft and drones maintain controlled flight by balancing aerodynamic forces and continuously adjusting their attitude and control surfaces.
-
-**Overall concept:**
-
-`Thrust → Motion → Airflow → Aerodynamic Forces → Stability & Control → Controlled Flight`
-
----
+### Disadvantages
+* **Limited Range:** Typically effective only at lower altitudes, usually restricted to the final 2,500 feet AGL.
+* **Terrain Sensitivity:** Readings can fluctuate abruptly over uneven terrain, steep cliffs, or dense tree canopies because the radio wave reflects off the highest or closest obstacle below.
 
 # 2. Understanding and Designing an Airfoil
 
@@ -196,10 +182,7 @@ Example: **NACA 4412**
 - **2nd digit:** Location of maximum camber in tenths of chord → 40%
 - **Last 2 digits:** Maximum thickness as % of chord → 12%
 
-Therefore, NACA 4412 has:
-- 4% maximum camber
-- Maximum camber at 40% chord
-- 12% maximum thickness
+---
 
 ### 2. NACA 5-Digit Series
 
@@ -207,24 +190,24 @@ Example: **NACA 23012**
 
 The 5-digit series provides more control over the **design lift coefficient and camber-line shape**.
 
-- First digit → Related to design lift coefficient
-- Second and third digits → Position/shape of maximum camber
-- Last two digits → Maximum thickness as % of chord
+- **1st digit (2):** Multiplied by $0.15$ to determine the design lift coefficient ($C_{li}$) $\rightarrow 2 \times 0.15 = 0.30$.
+- **2nd digit (3):** Multiplied by $5\%$ to give the location of maximum camber from the leading edge $\rightarrow 3 \times 5\% = 15\%$ of the chord.
+- **3rd digit (0):** Camber type indicator (`0` = standard normal camber, `1` = reflexed camber designed for zero pitching moment).
+- **Last 2 digits (12):** Maximum thickness as % of chord $\rightarrow 12\%$.
 
-The 5-digit series is mainly used when a specific **design lift characteristic** is required.
+---
 
 ### 3. NACA 6-Series
 
-Example: **NACA 63-412**
+Example: **NACA 63-412** (frequently styled with a subscript as **NACA 63$_4$-412**)
 
 The 6-series was developed primarily for **high aerodynamic efficiency and low drag**.
 
-Its nomenclature describes:
-- Pressure-distribution characteristics
-- Location of minimum pressure
-- Design lift condition
-- Maximum thickness
-
+- **1st digit (6):** Series identifier designating the advanced laminar-flow airfoil family.
+- **2nd digit (3):** Chordwise location of minimum pressure for Coriolis/basic symmetrical section in tenths of the chord $\rightarrow 30\%$ of the chord.
+- **Subscript digit (4):** Range of lift coefficient in tenths above and below the design lift coefficient where favorable pressure gradients and low drag are maintained $\rightarrow \pm 0.4$ range.
+- **Digit after the hyphen (4):** Design lift coefficient in tenths $\rightarrow 4 \times 0.1 = 0.4$.
+- **Last 2 digits (12):** Maximum thickness as % of chord $\rightarrow 12\%$.
 These airfoils are commonly associated with **laminar-flow airfoil design**.
 
 ## 2.3 Turbulence
@@ -233,42 +216,38 @@ These airfoils are commonly associated with **laminar-flow airfoil design**.
 
 The **Reynolds number** is used to characterize the flow:
 
-\[
-Re=\frac{\rho VL}{\mu}
-\]
+$$Re = \frac{\rho VL}{\mu}$$
 
 where:
-- \(\rho\) = Air density
-- \(V\) = Flow velocity
-- \(L\) = Characteristic length
-- \(\mu\) = Dynamic viscosity
+- $\rho$ = Air density
+- $V$ = Flow velocity
+- $L$ = Characteristic length
+- $\mu$ = Dynamic viscosity
 
 
 ### Design Parameters
-* **Airfoil Profile:** NACA 4412[cite: 1, 2]
-* **Solid Material:** Aluminum (`1 Part1.Body1`)[cite: 1, 2]
-* **Geometry Units:** Centimeters (cm)[cite: 1, 2]
-
+* **Airfoil Profile:** NACA 4412
+* **Solid Material:** Aluminum
 
 ## 2.4 Autodesk CFD Analysis
 
 The airfoil is placed inside an external airflow domain.
 
 ### CFD Setup
-* **CFD Software:** Autodesk CFD 2027[cite: 1, 2]
-* **Fluid Domain Material:** Air (`2 CFDCreatedVolume`)[cite: 1, 2]
-* **Mesh Type:** Automatic Mesh Sizing (`Mesh Size (auto)`)[cite: 1, 2]
-* **Solver Iterations:** 100 iterations[cite: 1, 2]
-* **Primary Result Field:** Velocity Magnitude (cm/s)[cite: 2]
+* **CFD Software:** Autodesk CFD 2027
+* **Fluid Domain Material:** Air
+* **Mesh Type:** Automatic Mesh Sizing
+* **Solver Iterations:** 100 iterations
+* **Primary Result Field:** Velocity Magnitude (cm/s)
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/CFD_1.png)
 
 ### Results
-* **Max Velocity Magnitude:** 3197.29 cm/s[cite: 2]
-* **Total Wetted Area:** 357.483 cm²[cite: 1]
-* **Total Force (FX):** 1.60029 N[cite: 1]
-* **Total Force (FY):** -0.00120279 N[cite: 1]
-* **Total Force (FZ):** -5.32802 N[cite: 1]
+* **Max Velocity Magnitude:** 3197.29 cm/s
+* **Total Wetted Area:** 357.483 cm²
+* **Total Force (FX):** 1.60029 N
+* **Total Force (FY):** -0.00120279 N
+* **Total Force (FZ):** -5.32802 N
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/CFD_2.png)
 
@@ -276,6 +255,7 @@ The airfoil is placed inside an external airflow domain.
 
 A **NACA 4412 airfoil** with 100 mm chord and 160 mm span and AOA:15° was modeled in Fusion 360 and analyzed in Autodesk CFD at 25 m/s. The lift and drag obtained for composite and wood-based configurations were compared, with the final design selected based on achieving the required **minimum 5 N lift** and suitable structural properties.
 
+---
 
 # 5. Understand About ESC
 
@@ -395,8 +375,6 @@ For example, if the UAV is moving rapidly toward its desired angle, the D term r
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/PID.jpg)
 
-PID tuning involves selecting suitable `Kp`, `Ki` and `Kd` values to achieve a stable and responsive UAV.
-
 A basic tuning procedure is:
 
 1. Start with a low **P** value.
@@ -438,10 +416,8 @@ Altitude Hold primarily controls the **vertical Z-axis**. The UAV can still drif
 | Controlled axis | X-Y position | Z-axis |
 | Primary sensor | GPS/GNSS | Barometer / Rangefinder |
 | Horizontal drift | Automatically corrected | Not automatically corrected |
-| Altitude | Usually maintained with altitude control | Directly maintained |
 | GPS requirement | Required for GPS-based position hold | Not necessarily required |
 | Wind compensation | Corrects horizontal movement caused by wind | Mainly compensates for vertical disturbances |
-| Complexity | More complex | Simpler |
 | Main control action | Roll/Pitch correction | Throttle correction |
 | Typical use | Hovering at a fixed location | Maintaining constant height |
 
@@ -457,7 +433,7 @@ To understand the various flight modes available in Mission Planner and their sp
 
 Mission Planner is a Ground Control Station (GCS) used with ArduPilot-based UAVs. It allows the user to configure, monitor and control the vehicle and select different flight modes according to the required operation.
 
-Flight modes determine how much control is given to the pilot and how much control is handled automatically by the flight controller. ArduPilot Copter provides modes ranging from fully manual stabilization to completely autonomous navigation. :contentReference[oaicite:0]{index=0}
+Flight modes determine how much control is given to the pilot and how much control is handled automatically by the flight controller. ArduPilot Copter provides modes ranging from fully manual stabilization to completely autonomous navigation.
 
 ---
 
@@ -584,12 +560,7 @@ When the sticks are moved, the UAV responds manually. When they are released, th
 
 Guided_NoGPS is a variation of Guided mode that does not require GPS.
 
-It accepts attitude targets and altitude-related commands but does not accept normal position or velocity targets.
-
 It is mainly intended for companion computers and specialized applications rather than normal manual flying.
-
-It should not be confused with a complete GPS-free position-hold mode.
-
 ---
 
 ## 13. Smart RTL
