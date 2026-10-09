@@ -20,6 +20,41 @@ CCW → Motor 2, Motor 3
 
 This arrangement provides torque balance and allows controlled yaw.
 
+### Basic Control Movements (Pitch, Roll, Yaw)
+
+All directional movements are controlled by varying the differential speed (RPM) between specific pairs of motors:
+
+#### 1. Pitch (Nose Up / Down)
+Pitch tilts the aircraft forward or backward along its lateral axis.
+
+* **Pitch Forward (Nose Down):** Speed up the rear motors and slow down the front motors. The extra lift generated at the rear tilts the nose downward, directing thrust backward to propel the drone forward.
+* **Pitch Backward (Nose Up):** Speed up the front motors and slow down the rear motors.
+
+#### 2. Roll (Side-to-Side Tilt)
+Roll tilts the aircraft left or right along its longitudinal axis.
+
+* **Roll Left:** Speed up the right-side motors and slow down the left-side motors. The higher thrust on the right pushes the left side down, causing lateral movement to the left.
+* **Roll Right:** Speed up the left-side motors and slow down the right-side motors.
+
+#### 3. Yaw (Rotation around Vertical Axis)
+Yaw rotates the drone clockwise or counter-clockwise without changing altitude or position. It relies on **torque imbalance** rather than differential lift.
+
+* **Yaw Clockwise:** Speed up the two counter-clockwise (CCW) motors and slow down the two clockwise (CW) motors. The increased reaction torque from the CCW motors pushes the frame in the opposite (clockwise) direction.
+* **Yaw Counter-Clockwise:** Speed up the two clockwise (CW) motors and slow down the two counter-clockwise (CCW) motors.
+
+---
+
+### Summary of Rotor Speeds by Movement
+
+Assuming a standard **+ Configuration** (Front = M1, Right = M2, Rear = M3, Left = M4):
+
+| Movement | Motor 1 (Front) | Motor 2 (Right) | Motor 3 (Rear) | Motor 4 (Left) | Net Effect |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Hover / Altitude** | Equal RPM | Equal RPM | Equal RPM | Equal RPM | Balanced lift equals weight |
+| **Pitch Forward** | Decrease RPM | Standard RPM | Increase RPM | Standard RPM | Nose tilts down |
+| **Roll Right** | Standard RPM | Decrease RPM | Standard RPM | Increase RPM | Vehicle tilts right |
+| **Yaw Clockwise** | Increase RPM (CCW) | Decrease RPM (CW) | Increase RPM (CCW) | Decrease RPM (CW) | CW reaction torque rotates frame |
+
 ## 1.1 Basic Principles of Flight
 
 ### Four Aerodynamic Forces
