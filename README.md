@@ -56,6 +56,29 @@ Yaw rotates the drone clockwise or counter-clockwise without changing altitude o
 | **VRX (Video Receiver)** | Captures the VTX video transmission inside the pilot's goggles or monitor. |
 | **Battery (LiPo)** | High-discharge power source supplying energy to the motors and electronics. |
 
+## Drone Sensors
+### 1. Gyroscope (Measuring Angular Velocity)
+
+#### Working Principle
+The gyroscope measures **angular velocity** (the rate of rotation around an axis, expressed in degrees per second or rad/s) across the three rotational axes: Roll, Pitch, and Yaw. 
+* **MEMS Design:** Inside the sensor, microscopic silicon structures (often shaped like tuning forks or ring structures) are driven into continuous, high-frequency electrostatic oscillation.
+* **The Coriolis Effect:** When the drone is rotated (e.g., pitched or rolled by wind), a secondary inertial force known as the **Coriolis force** acts perpendicularly to the direction of motion and the vibration. 
+* **Detection:** This force causes the vibrating elements to deflect slightly. Capacitive electrodes pick up this physical displacement, converting it into an electrical voltage proportional to the angular speed.
+
+### 2. Accelerometer (Measuring Linear Acceleration & Tilt)
+
+#### Working Principle
+The accelerometer measures **linear acceleration** along the X, Y, and Z axes, including the constant static acceleration pull of **Earth's gravity** ($1g \approx 9.81 \, \text{m/s}^2$).
+* **MEMS Design:** It consists of a microscopic proof mass attached to flexible micro-springs suspended between fixed capacitor plates. 
+* **Deflection & Capacitance:** When the drone accelerates linearly (speeds up, slows down, or moves vertically) or tilts, inertia shifts the microscopic proof mass. This movement changes the distance between the capacitor plates, altering electrical capacitance.
+
+
+### 3. Magnetometer (Measuring Magnetic Heading)
+
+#### Working Principle
+The magnetometer acts as a solid-state digital compass, measuring the strength and direction of the **Earth's magnetic field** relative to the drone's body frame.
+* **Sensing Technology:** Most drone magnetometers utilize **Anisotropic Magnetoresistance (AMR)** or Hall-effect sensors. These materials change their electrical resistance when exposed to external magnetic fields, allowing the sensor to resolve multi-axis vector components of ambient magnetism.
+
 ## 1.1 Basic Principles of Flight
 
 ### Four Aerodynamic Forces
