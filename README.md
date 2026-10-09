@@ -285,7 +285,7 @@ A potentiometer can be used as a variable throttle input. When the potentiometer
 This value is mapped to the required ESC throttle range. Therefore, rotating the potentiometer changes the control signal sent to the ESC, resulting in a corresponding change in BLDC motor speed.
 
 ## Task Simulation
-![alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/3b6f739936f2799225a83b694c86eeb313de1c57/ESP.mp4)
+<video src="https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/3b6f739936f2799225a83b694c86eeb313de1c57/ESP.mp4" controls width="100%"></video>
 
 # 6. Basics of PID
 
@@ -301,24 +301,24 @@ PID stands for **Proportional, Integral and Derivative**. It is a feedback contr
 
 A PID controller continuously compares the **desired value (setpoint)** with the **actual measured value** and calculates the error.
 
-\[
+$$
 Error = Setpoint - Actual\ Value
-\]
+$$
 
 The PID controller then uses this error to generate a correction signal for the motors.
 
 The basic PID equation is:
 
-\[
-Output = K_p e + K_i\int e\,dt + K_d\frac{de}{dt}
-\]
+$$
+Output = K_p e + K_i \int e \, dt + K_d \frac{de}{dt}
+$$
 
 where:
 
-- `Kp` = Proportional gain
-- `Ki` = Integral gain
-- `Kd` = Derivative gain
-- `e` = Error
+- $K_p$ = Proportional gain
+- $K_i$ = Integral gain
+- $K_d$ = Derivative gain
+- $e$ = Error
 
 ---
 
