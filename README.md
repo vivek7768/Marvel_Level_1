@@ -87,17 +87,22 @@ The magnetometer acts as a solid-state digital compass, measuring the strength a
 - **Thrust (T):** Force produced by an engine/propeller to move the aircraft forward.
 - **Drag (D):** Aerodynamic resistance opposing motion.
 
-### Bernoulli's Principle
-An increase in airflow velocity is associated with a decrease in static pressure. This pressure difference contributes to lift generation over an airfoil.
+## Bernoulli's Principle on an Airfoil
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/9b73b38523b5a0d7274a36173849037189bb3a61/Bernoulli.png)
+
+* **Streamline Division:** Incoming airflow splits at the leading edge into an upper path (blue) and a lower path (red)[cite: 3].
+* **Upper Path Dynamics:** The top path features high curvature and a longer distance, forcing air to move at high velocity, which creates a region of low pressure[cite: 3].
+* **Lower Path Dynamics:** The bottom path features lower curvature and a shorter distance, resulting in lower fluid velocity and higher static pressure[cite: 3].
+* **Bernoulli's Principle Core Rule:** According to Bernoulli's principle, an increase in fluid velocity occurs simultaneously with a decrease in static pressure[cite: 3].
+* **Lift Generation:** The resulting pressure differential—low pressure on top versus high pressure on the bottom—generates a net upward lifting force[cite: 3].
 
 ### Newton's Third Law
 An aircraft or propeller generates lift/thrust by accelerating air downward or backward. The air produces an equal and opposite reaction force on the aircraft.
 
 ## 1.2 Lift Equation
 
-![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c52237b39abd1faeaf7932eadb6b12b9eea27f3b/Lift_Force.png)
-
-Lift increases with air density, wing area, velocity², and coefficient of lift.
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/9b73b38523b5a0d7274a36173849037189bb3a61/LIFT_EQ.png)
 
 ## 1.3 Stability and Control
 
