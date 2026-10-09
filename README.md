@@ -28,11 +28,6 @@ This arrangement provides torque balance and allows controlled yaw.
 - **Thrust (T):** Force produced by an engine/propeller to move the aircraft forward.
 - **Drag (D):** Aerodynamic resistance opposing motion.
 
-For steady level flight:
-\[
-L = W,\qquad T = D
-\]
-
 ### Bernoulli's Principle
 An increase in airflow velocity is associated with a decrease in static pressure. This pressure difference contributes to lift generation over an airfoil.
 
@@ -41,7 +36,7 @@ An aircraft or propeller generates lift/thrust by accelerating air downward or b
 
 ## 1.2 Lift Equation
 
-
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c52237b39abd1faeaf7932eadb6b12b9eea27f3b/Lift_Force.png)
 
 Where:
 - \(L\) = Lift (N)
@@ -55,6 +50,8 @@ Lift increases with air density, wing area, velocity², and coefficient of lift.
 ## 1.3 Stability and Control
 
 Aircraft stability is the ability to return toward its original flight condition after a disturbance.
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/Control_Surfaces.png)
 
 ### Primary Control Surfaces
 | Surface | Controls |
@@ -72,6 +69,8 @@ Aircraft stability is the ability to return toward its original flight condition
 ## 1.4 Pitot Tube
 
 A **Pitot tube** measures the aircraft's total (stagnation) pressure. When combined with static pressure, the pressure difference is used to determine **airspeed**.
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/Pitot_Tube.png)
 
 \[
 q = P_t-P_s=\frac{1}{2}\rho V^2
@@ -102,6 +101,8 @@ Aircraft and drones maintain controlled flight by balancing aerodynamic forces a
 **Overall concept:**
 
 `Thrust → Motion → Airflow → Aerodynamic Forces → Stability & Control → Controlled Flight`
+
+---
 
 # 2. Understanding and Designing an Airfoil
 
