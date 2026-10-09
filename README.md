@@ -172,6 +172,8 @@ To understand airfoil fundamentals and nomenclature, model a NACA 4412 airfoil i
 
 An **airfoil** is a streamlined shape designed to produce lift when air flows around it.
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/3b6f739936f2799225a83b694c86eeb313de1c57/Airfoil.png)
+
 ### Important Terms
 - **Leading Edge:** Front of the airfoil.
 - **Trailing Edge:** Rear point of the airfoil.
