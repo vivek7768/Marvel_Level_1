@@ -719,6 +719,10 @@ To understand the legal framework for operating drones in India.
 Study the Drone Rules 2021 released by the Government of India
 Learn about BVLOS (Beyond Visual Line of Sight) regulations and how they impact flight planning, airspace management, and safety
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/541cc14405ee70a9e719c5a3e60cb20b0256a67f/Restricitions.png)
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/ecb12cc6ffd61846ca934b637632b7659112214f/Drone_Rules.jpg)
+
 ---
 
 
