@@ -285,7 +285,8 @@ A potentiometer can be used as a variable throttle input. When the potentiometer
 This value is mapped to the required ESC throttle range. Therefore, rotating the potentiometer changes the control signal sent to the ESC, resulting in a corresponding change in BLDC motor speed.
 
 ## Task Simulation
-<video src="https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/3b6f739936f2799225a83b694c86eeb313de1c57/ESP.mp4" controls width="100%"></video>
+
+https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/main/ESP.mp4
 
 # 6. Basics of PID
 
