@@ -182,33 +182,38 @@ where:
 - \(L\) = Characteristic length
 - \(\mu\) = Dynamic viscosity
 
-## 2.4 Airfoil CAD Model
 
 ### Design Parameters
+* **Airfoil Profile:** NACA 4412[cite: 1, 2]
+* **Solid Material:** Aluminum (`1 Part1.Body1`)[cite: 1, 2]
+* **Geometry Units:** Centimeters (cm)[cite: 1, 2]
 
 
-## 2.5 Autodesk CFD Analysis
+## 2.4 Autodesk CFD Analysis
 
 The airfoil is placed inside an external airflow domain.
 
 ### CFD Setup
+* **CFD Software:** Autodesk CFD 2027[cite: 1, 2]
+* **Fluid Domain Material:** Air (`2 CFDCreatedVolume`)[cite: 1, 2]
+* **Mesh Type:** Automatic Mesh Sizing (`Mesh Size (auto)`)[cite: 1, 2]
+* **Solver Iterations:** 100 iterations[cite: 1, 2]
+* **Primary Result Field:** Velocity Magnitude (cm/s)[cite: 2]
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/CFD_1.png)
 
 ### Results
+* **Max Velocity Magnitude:** 3197.29 cm/s[cite: 2]
+* **Total Wetted Area:** 357.483 cm²[cite: 1]
+* **Total Force (FX):** 1.60029 N[cite: 1]
+* **Total Force (FY):** -0.00120279 N[cite: 1]
+* **Total Force (FZ):** -5.32802 N[cite: 1]
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/CFD_2.png)
 
+## 2.5 Conclusion
 
-### Design Requirement
-
-\[
-\boxed{L \geq 5N}
-\]
-
-For identical geometry and flow conditions, changing only the material will not significantly change CFD lift or drag unless **structural deformation/FSI** is considered.
-
-## 2.6 Conclusion
-
-A **NACA 4412 airfoil** with 100 mm chord and 160 mm span was modeled in Fusion 360 and analyzed in Autodesk CFD at 25 m/s. The lift and drag obtained for composite and wood-based configurations were compared, with the final design selected based on achieving the required **minimum 5 N lift** and suitable structural properties.
+A **NACA 4412 airfoil** with 100 mm chord and 160 mm span and AOA:15° was modeled in Fusion 360 and analyzed in Autodesk CFD at 25 m/s. The lift and drag obtained for composite and wood-based configurations were compared, with the final design selected based on achieving the required **minimum 5 N lift** and suitable structural properties.
 
 
 # 5. Understand About ESC
@@ -270,8 +275,9 @@ Variable Speed
 
 The ESC therefore acts as the interface between the Arduino's low-power control signal and the high-current BLDC motor.
 
-## Circuit
+## Task Simulation
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/642fa499c3d25c73cefddaeed060a65c7d8c640b/ESP.mp4)
 
 ## Applications
 
