@@ -123,17 +123,19 @@ Aircraft stability is the ability to return toward its original flight condition
 - **Spoilers/Airbrakes:** Increase drag and/or reduce lift for deceleration and descent.
 - **Trim Tabs:** Reduce the control force required from the pilot.
 
-## 1.4 Pitot Tube
-
-A **Pitot tube** measures the aircraft's total (stagnation) pressure. When combined with static pressure, the pressure difference is used to determine **airspeed**.
+## Working of a Pitot Tube
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c819c0da2e4cb8562f5f6f6bc2b0d8ae479ee9fd/Pitot_Tube.png)
 
-\[
-q = P_t-P_s=\frac{1}{2}\rho V^2
-\]
-
-where \(P_t\) is total pressure and \(P_s\) is static pressure.
+* **Primary Purpose:** A Pitot tube is an aerodynamic measurement instrument used to determine fluid flow velocity or aircraft airspeed[cite: 5].
+* **Total Pressure ($P_t$):** 
+  * The central forward-facing opening points directly into the oncoming airflow[cite: 5].
+  * As air enters this tube, it is brought to a complete stop at a stagnation point, converting all kinetic energy into measurable stagnation pressure[cite: 5].
+* **Static Pressure ($P_s$):** 
+  * Small ports located on the sides of the probe, perpendicular to the flow, measure the undisturbed ambient static pressure of the surrounding fluid[cite: 5].
+* **Pressure Transducer & Airspeed Calculation:** 
+  * Both the total pressure ($P_t$) and static pressure ($P_s$) lines feed directly into a differential pressure transducer[cite: 5].
+  * The transducer measures the difference between these two values ($P_t - P_s$), which gives the dynamic pressure used to calculate the actual speed[cite: 5].
 
 ## 1.5 Radio Altimeter
 
