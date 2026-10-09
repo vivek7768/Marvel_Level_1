@@ -391,20 +391,7 @@ For example, if the UAV is moving rapidly toward its desired angle, the D term r
 
 ---
 
-## 5. PID Control in UAVs
-
-PID controllers are commonly used in different UAV control loops:
-
-- **Roll control** – maintains lateral attitude
-- **Pitch control** – maintains forward/backward attitude
-- **Yaw control** – controls heading
-- **Altitude control** – maintains desired height
-- **Position control** – maintains horizontal position
-
-When wind or another disturbance causes the UAV to tilt, sensors detect the change. The flight controller calculates the error and changes individual motor speeds to restore the desired attitude.
-
-
-## 6. PID Tuning for UAV Stability
+## 5. PID Tuning for UAV Stability
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/PID.jpg)
 
@@ -421,9 +408,7 @@ A basic tuning procedure is:
 
 The objective is to achieve a balance between **response speed, stability and accuracy**.
 
----
-
-## 7. GPS Hold
+## 6. GPS Hold
 
 **GPS Hold**, also known as **Position Hold** or **Loiter** on some flight controllers, is a flight mode used to maintain the UAV at a fixed horizontal location.
 
@@ -433,7 +418,7 @@ GPS Hold primarily controls the UAV's horizontal position. Altitude is generally
 
 ---
 
-## 8. Altitude Hold
+## 7. Altitude Hold
 
 **Altitude Hold** is a flight mode that automatically maintains the UAV at a selected height.
 
@@ -445,7 +430,7 @@ Altitude Hold primarily controls the **vertical Z-axis**. The UAV can still drif
 
 ---
 
-## 9. GPS Hold vs Altitude Hold
+## 8. GPS Hold vs Altitude Hold
 
 | Parameter | GPS Hold | Altitude Hold |
 |---|---|---|
