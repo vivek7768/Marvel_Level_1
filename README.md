@@ -4,6 +4,22 @@
 ## Objective
 To understand the basic principles of flight, aerodynamic forces, aircraft control surfaces, and essential flight instruments.
 
+## Quadcopter Flight Mechanics
+
+A quadcopter uses four fixed-pitch propellers. Instead of changing blade pitch like a helicopter, it changes motor RPM.
+
+Typically, two motors rotate clockwise and two rotate counter-clockwise. Their reaction torques cancel each other during normal operation.
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c52237b39abd1faeaf7932eadb6b12b9eea27f3b/Drone.png)
+
+Basic Motor Arrangement
+
+CW → Motor 1, Motor 4
+
+CCW → Motor 2, Motor 3
+
+This arrangement provides torque balance and allows controlled yaw.
+
 ## 1.1 Basic Principles of Flight
 
 ### Four Aerodynamic Forces
@@ -25,9 +41,7 @@ An aircraft or propeller generates lift/thrust by accelerating air downward or b
 
 ## 1.2 Lift Equation
 
-\[
-L=\frac{1}{2}\rho V^2 S C_L
-\]
+
 
 Where:
 - \(L\) = Lift (N)
