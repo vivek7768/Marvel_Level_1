@@ -706,8 +706,6 @@ Follow mode uses position information and is based on ArduPilot's guided/navigat
 | Smart RTL | Returns by retracing path | Yes | High |
 | Follow | Follows another vehicle/target | Yes | High |
 
-The ArduPilot documentation classifies modes according to whether altitude and position are manually or automatically controlled, and whether a valid position estimate is required. :contentReference[oaicite:14]{index=14}
-
 ---
 
 # 9. DGCA Regulations
