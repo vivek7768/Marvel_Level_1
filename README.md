@@ -277,7 +277,6 @@ The ESC therefore acts as the interface between the Arduino's low-power control 
 
 ## Task Simulation
 
-![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/642fa499c3d25c73cefddaeed060a65c7d8c640b/ESP.mp4)
 
 ## Applications
 
@@ -296,7 +295,7 @@ ESC-controlled BLDC motors are widely used in:
 The experiment provides an understanding of how an ESC electronically controls a BLDC motor and how an Arduino with a potentiometer can be used to vary its speed.
 
 
-# 6. PID Tuning and UAV Stability
+# 6. Basics of PID
 
 ## Objective
 
@@ -337,6 +336,8 @@ The **Proportional term** responds to the present error. A larger error produces
 
 For example, if a UAV tilts away from its desired level position, the P controller increases the motor correction to bring it back.
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/P_Controller.jpg)
+
 ### Effect of Increasing P
 
 - Faster response
@@ -352,19 +353,22 @@ The **Integral term** responds to the accumulated error over time. It helps elim
 
 For example, if wind continuously pushes the UAV slightly to one side, the integral term gradually increases the correction to remove the remaining error.
 
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/I_Controller.jpg)
+
 ### Effect of Increasing I
 
 - Removes steady-state error
 - Improves long-term accuracy
 - Excessive I can cause overshoot and oscillations
 
----
 
 ## 4. Derivative (D) Control
 
 The **Derivative term** responds to how quickly the error is changing. It acts as a damping term and helps prevent sudden overshoot and oscillations.
 
 For example, if the UAV is moving rapidly toward its desired angle, the D term reduces the correction before it overshoots.
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/D_Controller.jpg)
 
 ### Effect of Increasing D
 
@@ -387,9 +391,10 @@ PID controllers are commonly used in different UAV control loops:
 
 When wind or another disturbance causes the UAV to tilt, sensors detect the change. The flight controller calculates the error and changes individual motor speeds to restore the desired attitude.
 
----
 
 ## 6. PID Tuning for UAV Stability
+
+![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/eda49c5f32d783ffd5a4dfe8a3dc8816031e1971/PID.jpg)
 
 PID tuning involves selecting suitable `Kp`, `Ki` and `Kd` values to achieve a stable and responsive UAV.
 
