@@ -465,13 +465,6 @@ Flight modes determine how much control is given to the pilot and how much contr
 
 Stabilize is a basic manual flight mode in which the pilot controls the throttle, yaw, roll and pitch. The flight controller automatically self-levels the roll and pitch axes when the sticks are released.
 
-It is useful for:
-- Basic manual flying
-- Learning UAV control
-- Testing the aircraft after setup
-
-It does not automatically maintain the UAV's position, so wind can cause the vehicle to drift. :contentReference[oaicite:1]{index=1}
-
 ---
 
 ## 2. ACRO
@@ -480,11 +473,6 @@ ACRO mode is an advanced manual flight mode intended for experienced pilots. Unl
 
 The pilot controls the angular rate of the aircraft, allowing continuous rolls and flips.
 
-It is mainly used for:
-- Aerobatic flying
-- FPV flying
-- Advanced pilot training
-
 ---
 
 ## 3. Altitude Hold
@@ -492,13 +480,6 @@ It is mainly used for:
 Altitude Hold automatically maintains the UAV's altitude while allowing the pilot to control roll, pitch and yaw.
 
 The flight controller primarily uses a barometer to estimate altitude and automatically adjusts the throttle to maintain the desired height.
-
-It is useful when:
-- A constant height is required
-- Manual horizontal movement is desired
-- GPS is unavailable
-
-The UAV can still drift horizontally because its position is not automatically held. :contentReference[oaicite:2]{index=2}
 
 ---
 
@@ -516,14 +497,6 @@ A mission can contain:
 
 The UAV automatically navigates between waypoints using its position and altitude controllers.
 
-It is mainly used for:
-- Autonomous missions
-- Mapping
-- Surveying
-- Repeated flight paths
-
-Auto mode combines altitude control similar to AltHold and position control similar to Loiter. :contentReference[oaicite:3]{index=3}
-
 ---
 
 ## 5. Guided
@@ -531,14 +504,6 @@ Auto mode combines altitude control similar to AltHold and position control simi
 Guided mode allows the pilot or a Ground Control Station to command the UAV to fly to a selected location.
 
 In Mission Planner, the operator can select a location on the map and command the UAV to move there. After reaching the target, the UAV normally holds that location.
-
-It is useful for:
-- Interactive waypoint navigation
-- Testing navigation
-- Sending the UAV to a specific location
-- Companion-computer control
-
-Guided mode can also be controlled by scripts or companion computers. :contentReference[oaicite:4]{index=4}
 
 ---
 
@@ -548,14 +513,6 @@ Loiter automatically maintains the UAV's current position, altitude and heading.
 
 The pilot can still move the UAV using the control sticks. When the sticks are released, the UAV slows down and attempts to return to and hold its previous position.
 
-It is useful for:
-- Stable hovering
-- Manual flying with position assistance
-- Taking photographs
-- Training new pilots
-
-A reliable GPS signal, compass and low vibration are important for good Loiter performance. :contentReference[oaicite:5]{index=5}
-
 ---
 
 ## 7. Return to Launch (RTL)
@@ -564,19 +521,11 @@ RTL stands for **Return to Launch**.
 
 When RTL is activated, the UAV automatically returns to its home position, which is normally the location where it was armed.
 
-Depending on the configured parameters, the UAV:
-1. Climbs to an appropriate return altitude.
-2. Travels toward the home position.
-3. Hovers above the home position.
-4. Descends and lands if configured to do so.
-
 RTL is mainly used as a safety feature when:
 - The pilot loses control
 - The battery is low
 - The communication link is lost
 - The mission needs to be aborted
-
-A reliable position estimate, normally from GPS, is required. :contentReference[oaicite:6]{index=6}
 
 ---
 
@@ -592,8 +541,6 @@ It can be useful for:
 - Inspecting a fixed object
 - Demonstrating autonomous navigation
 
-Circle mode requires a valid position estimate. :contentReference[oaicite:7]{index=7}
-
 ---
 
 ## 9. Land
@@ -606,8 +553,6 @@ It is useful for:
 - Automated landing
 - Emergency landing
 - Completing autonomous missions
-
-The UAV gradually reduces its altitude until it reaches the ground and detects that it has landed. :contentReference[oaicite:8]{index=8}
 
 ---
 
@@ -622,8 +567,6 @@ It is useful for:
 - Smooth turns
 - Learning coordinated UAV control
 
-Drift uses position information but still provides significant manual control to the pilot. :contentReference[oaicite:9]{index=9}
-
 ---
 
 ## 11. PosHold
@@ -634,10 +577,6 @@ It is similar to Loiter because it automatically maintains the UAV's position an
 
 When the sticks are moved, the UAV responds manually. When they are released, the flight controller attempts to stop the UAV and hold its position.
 
-It is useful for:
-- Manual flying with GPS assistance
-- Smooth position holding
-- Situations where more manual control than Loiter is preferred. :contentReference[oaicite:10]{index=10}
 
 ---
 
@@ -649,7 +588,7 @@ It accepts attitude targets and altitude-related commands but does not accept no
 
 It is mainly intended for companion computers and specialized applications rather than normal manual flying.
 
-It should not be confused with a complete GPS-free position-hold mode. :contentReference[oaicite:11]{index=11}
+It should not be confused with a complete GPS-free position-hold mode.
 
 ---
 
@@ -662,9 +601,6 @@ Instead of simply flying directly back to the home location, the UAV records its
 This can be useful when:
 - The direct path to home may contain obstacles
 - The UAV has flown through a narrow route
-- Retracing the previous path is safer
-
-Smart RTL requires a valid position estimate and sufficient stored path information. :contentReference[oaicite:12]{index=12}
 
 ---
 
@@ -673,14 +609,6 @@ Smart RTL requires a valid position estimate and sufficient stored path informat
 Follow mode allows the UAV to automatically follow another vehicle or a ground station.
 
 The UAV receives the target's position and continuously updates its own position to follow it.
-
-It can be useful for:
-- Following a person
-- Vehicle tracking
-- Filming moving subjects
-- Autonomous convoy applications
-
-Follow mode uses position information and is based on ArduPilot's guided/navigation capabilities. :contentReference[oaicite:13]{index=13}
 
 ---
 
