@@ -298,62 +298,13 @@ A **Brushless DC motor** consists mainly of a permanent-magnet rotor and multipl
 
 Unlike a brushed DC motor, the BLDC motor requires an electronic controller to switch the stator windings. The ESC performs this function and controls the motor speed by regulating the power supplied to the motor.
 
-### ESC Control Signal
-
-An Arduino typically controls an ESC using a **servo-type PWM control signal**. A common ESC control signal has a frequency of approximately **50 Hz**, corresponding to a period of 20 ms.
-
-The throttle information is represented by the pulse width:
-
-- **1000 µs:** Minimum throttle
-- **1500 µs:** Approximately mid throttle
-- **2000 µs:** Maximum throttle
-
-The ESC interprets the pulse width and adjusts the power supplied to the BLDC motor accordingly.
-
 ### Potentiometer as Throttle Control
 
 A potentiometer can be used as a variable throttle input. When the potentiometer is rotated, its output voltage changes. The Arduino reads this voltage using its analog-to-digital converter (ADC), which provides a value from **0 to 1023**.
 
 This value is mapped to the required ESC throttle range. Therefore, rotating the potentiometer changes the control signal sent to the ESC, resulting in a corresponding change in BLDC motor speed.
 
-### Working Principle
-
-The overall working process can be represented as:
-
-Potentiometer  
-↓  
-Arduino ADC  
-↓  
-Throttle Signal  
-↓  
-ESC  
-↓  
-Electronic Commutation  
-↓  
-BLDC Motor  
-↓  
-Variable Speed
-
-The ESC therefore acts as the interface between the Arduino's low-power control signal and the high-current BLDC motor.
-
 ## Task Simulation
-
-
-## Applications
-
-ESC-controlled BLDC motors are widely used in:
-
-- Drones and multirotors
-- RC cars and aircraft
-- Robotics
-- Electric vehicles
-- Cooling fans
-- Industrial automation
-- Other variable-speed motor applications
-
-## Result
-
-The experiment provides an understanding of how an ESC electronically controls a BLDC motor and how an Arduino with a potentiometer can be used to vary its speed.
 
 
 # 6. Basics of PID
