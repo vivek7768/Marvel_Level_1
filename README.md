@@ -44,17 +44,6 @@ Yaw rotates the drone clockwise or counter-clockwise without changing altitude o
 
 ---
 
-### Summary of Rotor Speeds by Movement
-
-Assuming a standard **+ Configuration** (Front = M1, Right = M2, Rear = M3, Left = M4):
-
-| Movement | Motor 1 (Front) | Motor 2 (Right) | Motor 3 (Rear) | Motor 4 (Left) | Net Effect |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Hover / Altitude** | Equal RPM | Equal RPM | Equal RPM | Equal RPM | Balanced lift equals weight |
-| **Pitch Forward** | Decrease RPM | Standard RPM | Increase RPM | Standard RPM | Nose tilts down |
-| **Roll Right** | Standard RPM | Decrease RPM | Standard RPM | Increase RPM | Vehicle tilts right |
-| **Yaw Clockwise** | Increase RPM (CCW) | Decrease RPM (CW) | Increase RPM (CCW) | Decrease RPM (CW) | CW reaction torque rotates frame |
-
 ## 1.1 Basic Principles of Flight
 
 ### Four Aerodynamic Forces
