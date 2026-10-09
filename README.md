@@ -97,13 +97,6 @@ An aircraft or propeller generates lift/thrust by accelerating air downward or b
 
 ![image alt](https://github.com/vivek7768/Marvel_Level_1_IMGS/blob/c52237b39abd1faeaf7932eadb6b12b9eea27f3b/Lift_Force.png)
 
-Where:
-- \(L\) = Lift (N)
-- \(\rho\) = Air density (kg/m³)
-- \(V\) = Air velocity (m/s)
-- \(S\) = Wing area (m²)
-- \(C_L\) = Coefficient of lift
-
 Lift increases with air density, wing area, velocity², and coefficient of lift.
 
 ## 1.3 Stability and Control
