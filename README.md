@@ -42,7 +42,19 @@ Yaw rotates the drone clockwise or counter-clockwise without changing altitude o
 * **Yaw Clockwise:** Speed up the two counter-clockwise (CCW) motors and slow down the two clockwise (CW) motors. The increased reaction torque from the CCW motors pushes the frame in the opposite (clockwise) direction.
 * **Yaw Counter-Clockwise:** Speed up the two clockwise (CW) motors and slow down the two counter-clockwise (CCW) motors.
 
----
+## FPV Drone Core Hardware Components
+
+| Component | Primary Function |
+| :--- | :--- |
+| **Flight Controller (FC)** | The "brain" running stabilization algorithms and processing sensor inputs. |
+| **Radio Transmitter (TX)** | Handheld controller operated by the pilot to send flight commands. |
+| **Receiver (RX)** | Onboard module that intercepts wireless commands from the TX. |
+| **Electronic Speed Controller (ESC)** | Regulates high current from the battery to dynamically control motor RPM. |
+| **GPS Module** | Provides satellite positioning for coordinates and Return-to-Home safety. |
+| **FPV Camera** | Captures the real-time first-person optical video feed. |
+| **Video Transmitter (VTX)** | Broadcasts the live video signal wirelessly back to the ground station. |
+| **VRX (Video Receiver)** | Captures the VTX video transmission inside the pilot's goggles or monitor. |
+| **Battery (LiPo)** | High-discharge power source supplying energy to the motors and electronics. |
 
 ## 1.1 Basic Principles of Flight
 
